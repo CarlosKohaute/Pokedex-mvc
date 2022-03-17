@@ -1,0 +1,23 @@
+{
+  "name": "pokedex-mvc",
+  "version": "1.0.0",
+  "description": "Projeto MVC pokedex",
+  "main": "index.js",
+  "scripts": {
+  "start": "node index.js",
+  "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosKohaute/Pokedex-mvc.git"
+  },
+  "author": "Carlos Kohaute",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlosKohaute/Pokedex-mvc/issues"
+  },
+  "homepage": "https://github.com/CarlosKohaute/Pokedex-mvc#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
