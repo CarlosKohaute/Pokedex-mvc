@@ -34,7 +34,7 @@ const pokedex=[
       type: "Fire",
       abilitie: "Intimidate", 
       abilitie2: "Flash fire",
-      image : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+      image : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png"
       }
   
 ]
@@ -42,7 +42,7 @@ const pokedex=[
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index", pokedex);
+  res.render("index", {pokedex});
 });
 
 app.listen(3000, () =>

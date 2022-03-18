@@ -9,20 +9,21 @@
 <body>
   <header></header>
             <section>
+
               <% pokedex.forEach((pokemon)   =>{ %>
 
               
               <div> 
-                <img src="<% =pokemon.image %>" alt="">
-                <h2><% =pokemon.name %></h2>
-                <p>Description<% =pokemon.description %></p>
-                <p>Type: <% =pokemon.type %></p>
-                <p>Category: <% =pokemon.category %></p>
-                <p>Height: <% =pokemon.height %>m</p>
-                <p>Weight: <% =pokemon.name %>kg</p>
-                <p>Type: <% =pokemon.type %></p>
-                <p>Abilitie: <% =pokemon.abilitie %></p>
-                <p> <% =pokemon.abilitie2 %></p>
+                <img src="<%= pokemon.image %>" alt="">
+                <h2><%= pokemon.name %></h2>
+                <p>Description<%= pokemon.description %></p>
+                <p>Type: <%= pokemon.type %></p>
+                <p>Category: <%= pokemon.category %></p>
+                <p>Height: <%= pokemon.height %>m</p>
+                <p>Weight: <%= pokemon.name %>kg</p>
+                <p>Type: <%= pokemon.type %></p>
+                <p>Abilitie: <%= pokemon.abilitie %></p>
+                <p> <%= pokemon.abilitie2 %></p>
               </div>
 
              <% }) %>
