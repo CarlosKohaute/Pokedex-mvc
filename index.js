@@ -23,13 +23,26 @@ const pokedex=[
     type: "Water",
     Abilitie: "Torrent",
     image : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
-    }
+    },
+    {
+      number : 59,
+      name : "Arcanine",
+      description: "The sight of it running over 6,200 miles in a single day and night has captivated many people. ",
+      category: "Legendary",
+      height: 1.9,
+      weight: 155.0,
+      type: "Fire",
+      abilitie: "Intimidate", 
+      abilitie2: "Flash fire",
+      image : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+      }
+  
 ]
 
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", pokedex);
 });
 
 app.listen(3000, () =>
