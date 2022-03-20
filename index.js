@@ -1,5 +1,9 @@
 const express = require("express");
+const path = require("path")
 const app = express();
+
+app.set("view engine", "ejs");
+app.use(express.static(path.join(__dirname, "public")))
 
 const pokedex=[
   {
@@ -10,7 +14,7 @@ const pokedex=[
   height: 0.6,
   weight: 9.9,
   type: "Fire",
-  Abilitie: "Flash fire",
+  abilitie: "Flash fire",
   image : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png"
   },
   {
@@ -21,7 +25,7 @@ const pokedex=[
     height: 1.6,
     weight: 85.5,
     type: "Water",
-    Abilitie: "Torrent",
+    abilitie: "Torrent",
     image : "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
     },
     {
@@ -39,8 +43,7 @@ const pokedex=[
   
 ]
 
-app.set("view engine", "ejs");
-
+//rotes
 app.get("/", (req, res) => {
   res.render("index", {pokedex});
 });
