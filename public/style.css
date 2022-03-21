@@ -10,6 +10,7 @@
 header{
   background-color: #424242;
   padding-bottom: 2% ;
+  height: 10rem;
 }
 #headerimg {
   margin-top: 2%;
@@ -17,6 +18,9 @@ header{
  max-height: 8rem;
  margin-bottom: -2%;
 }
+header h2{
+margin-bottom: 1rem
+;}
 body{
   background-color: #808080;
 }
@@ -40,20 +44,18 @@ main{
 section#body{
   display: flex;
   justify-content: space-evenly;
-  margin-top: 4rem;
+  margin-top: 3rem;
   flex-wrap: wrap;
 }
 section#body div.card{
   width: 13%;
   box-shadow: 2px 0px gray, 0.5em 0 0.4em #a9a9a9 ;
-  margin-left: 0.1%;
+  margin-left: -0.1% ;
   padding: 5%;
   background-color: white;
-  margin-top: 2%;
   border-radius: 10px;
-
+  margin-top: 2rem;
 }
-
 section#body div.card img{
   width: 95%;
   margin-bottom: 2%;
