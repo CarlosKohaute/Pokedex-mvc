@@ -46,20 +46,21 @@ const pokedex = [
     abilitie: "Intimidate",
     abilitie2: "Flash fire",
     image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/059.png",
-  },{
+  },
+  {
     id: 4,
-  number: 04,
-  name: "Charmander",
-  description:
-    "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail. ",
-  category: "Lizard",
-  height: 0.6,
-  weight: 8.5,
-  type: "Fire",
-  abilitie: "Blaze",
-  abilitie2: "",
-  image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
-}
+    number: 04,
+    name: "Charmander",
+    description:
+      "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail. ",
+    category: "Lizard",
+    height: 0.6,
+    weight: 8.5,
+    type: "Fire",
+    abilitie: "Blaze",
+    abilitie2: "",
+    image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+  },
 ];
 
 //rotes
@@ -71,17 +72,26 @@ app.get("/", (req, res) => {
 app.post("/create", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
-  pokedex.push(pokemon)
+  pokedex.push(pokemon);
   res.redirect("/");
 });
 
-app.get("/update/ :id",  (req, res) =>{
-const id =  +req.params.id;
+app.get("/details/:id", (req, res) => {
+  const id = +req.params.id;
+  pokemon = pokedex.find((pokemon) => pokemon.id === id);
+  res.redirect("/");
+});
 
-const pokemon = pokedex.find(pokemon => pokemon.id == id)
-res.render( "index", {pokemon, pokedex});
-}
-);
+app.post("/update/:id", (req, res) => {
+  const id = +req.params.id - 1;
+  const newPokemon = req.body;
+  newPokemon.id = id + 1;
+  pokedex[id] = newPokemon;
+  
+  pokemon = undefined;
+
+  res.redirect("/");
+});
 app.listen(3000, () =>
   console.log("Servidor rodando em http://localhost:3000")
 );

@@ -11,14 +11,21 @@ header{
   background-color: #424242;
   padding-bottom: 2% ;
 }
+#headerimg {
+  margin-top: 2%;
+  text-align: center;
+ max-height: 8rem;
+ margin-bottom: -2%;
+}
 body{
   background-color: #808080;
 }
 #title{
   -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: #000;
-  margin-left: 10%;
-  padding-top: 1%;
+  margin-left: 20%;
+  margin-top: -5%;
+  margin-bottom: 5%;
   font-size: 4em;
   color: #3c5aa6;
 }
@@ -33,12 +40,11 @@ main{
 section#body{
   display: flex;
   justify-content: space-evenly;
-  margin-top: 2rem;
+  margin-top: 4rem;
   flex-wrap: wrap;
-  
 }
 section#body div.card{
-  width: 10%;
+  width: 13%;
   box-shadow: 2px 0px gray, 0.5em 0 0.4em #a9a9a9 ;
   margin-left: 0.1%;
   padding: 5%;
@@ -49,7 +55,7 @@ section#body div.card{
 }
 
 section#body div.card img{
-  width: 90%;
+  width: 95%;
   margin-bottom: 2%;
 }
 
@@ -113,4 +119,26 @@ section#register form button:hover{
   background-color: black;
   color: white;
 
+}
+
+
+section#body div.card a{
+  padding: 0.6rem;
+  justify-content: center;
+  display: flex;
+  width: 15%;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px #3c5aa6;
+  color: #3c5aa6;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+section#body div.card a:hover{
+  background-color: #3c5aa6;
+  color: white;
 }
