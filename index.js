@@ -2,6 +2,8 @@ const express = require("express");
 const path = require("path");
 const app = express();
 
+
+
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
@@ -87,11 +89,10 @@ app.post("/update/:id", (req, res) => {
   const newPokemon = req.body;
   newPokemon.id = id + 1;
   pokedex[id] = newPokemon;
-  
   pokemon = undefined;
-
   res.redirect("/");
 });
+
 app.listen(3000, () =>
   console.log("Servidor rodando em http://localhost:3000")
 );

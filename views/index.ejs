@@ -9,20 +9,21 @@
   </head>
   <body>
     <header>
-      <img src="/img/logo-pokemon.png" alt="" id="headerimg">
+      <img src="/img/logo-pokemon.png" alt="Pokemon logo" id="headerimg">
       <h1 id="title">Pokedéx</h1>
       <h2>Pokemon list</h2>
 
+      <div >
+        <a  href="#register">Register</a>     
+       </div>
     </header>
+
     <main>
-     
-
-
       <section id="body">
      
         <% pokedex.forEach((pokemon) =>{ %>     
         <div class="card">
-          <img src="<%= pokemon.image %>" alt="">
+          <img src="<%= pokemon.image %>" alt="Pokemon">
           <h2><%= pokemon.name %></h2> <h3> N° <%= pokemon.number %></h3>
            <p class="description">Description: <%= pokemon.description %></p>
            <p>Type: <%= pokemon.type %></p>
@@ -33,13 +34,10 @@
           <p>Abilitie: <%= pokemon.abilitie %></p>
           <p ><%= pokemon.abilitie2 %></p>
           <a id="editar" href="/details/<%= pokemon.id %>">Edit</a>
-          <a id="apagar" href="/delete/<%= pokemon.id %>">Delete</a>
           </div>
 
         <% }) %>
       </section>
-
-      
 
       </section>
       <section id="register">
@@ -119,6 +117,18 @@
 
     </main>
 
-    <footer></footer>
+    <footer>
+      <p>This project was made for educational purposes only without any intention of profit. </p>
+      <div id="poke">
+      <p>Informations entired from <a  href="https://www.pokemon.com/br/pokedex/">pokedex</a></p>
+    </div>
+
+    <div id="myName">
+      <p>Author: Carlos Kohaute</p>
+      <a href="https://www.linkedin.com/in/carlos-kohaute-113a69229/">LinkedIn</a>
+      <a href="https://github.com/CarlosKohaute">GitHub</a>
+    </div>
+
+    </footer>
   </body>
 </html>
